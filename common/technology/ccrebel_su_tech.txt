@@ -85,10 +85,7 @@ tech_ccrebel_unrest_1 = {
 		}
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
-			}
+			is_pacifist = yes
 			any_neighbor_country = {
 				has_communications = root
 				any_owned_planet = {
@@ -216,10 +213,7 @@ tech_ccrebel_unrest_1 = {
 		}
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
-			}
+			is_pacifist = yes
 			any_neighbor_country = {
 				has_communications = root
 				any_owned_planet = {
@@ -378,10 +372,7 @@ tech_ccrebel_unrest_2 = {
 		}
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
-			}
+			is_pacifist = yes
 			any_neighbor_country = {
 				has_communications = root
 				any_owned_planet = {
@@ -509,10 +500,7 @@ tech_ccrebel_unrest_2 = {
 		}
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
-			}
+			is_pacifist = yes
 			any_neighbor_country = {
 				has_communications = root
 				any_owned_planet = {

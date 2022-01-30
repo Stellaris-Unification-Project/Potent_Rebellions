@@ -582,7 +582,7 @@ planet_event = {
 		
 		
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		
 		any_owned_species = {
 			species_has_happiness_with_owner = root.owner
@@ -594,10 +594,10 @@ planet_event = {
 		
 		if = { # joins rebels
 			limit = { 
-				any_country = {
+				any_playable_country = {
 					has_country_flag = cc_rebellion
 					is_country_type = default
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					root = {
 						any_owned_pop = {
 							is_same_species = prevprev
@@ -609,7 +609,7 @@ planet_event = {
 				limit = {
 					has_country_flag = cc_rebellion
 					is_country_type = default
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					root = {
 						any_owned_pop = {
 							is_same_species = prevprev
@@ -946,13 +946,13 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				any_country = {
+				any_playable_country = {
 					has_country_flag = cc_rebellion
 					is_same_species = root
 					is_country_type = default
 					NOR = {
 						is_same_value = event_target:new_rebels
-						is_same_value = from.owner
+						is_same_empire = from.owner
 						is_same_empire = from.owner
 						has_country_flag = copycat_rebels
 						has_country_flag = cc_rebels_merging
@@ -966,7 +966,7 @@ country_event = {
 					is_country_type = default
 					NOR = {
 						is_same_value = event_target:new_rebels
-						is_same_value = from.owner
+						is_same_empire = from.owner
 						is_same_empire = from.owner
 						has_country_flag = copycat_rebels
 						has_country_flag = cc_rebels_merging
@@ -996,12 +996,12 @@ country_event = {
 		else = {
 			if = {
 				limit = { 
-					any_country = {
+					any_playable_country = {
 						is_same_species = root
 						is_country_type = default
 						NOR = {
 							is_same_value = event_target:new_rebels
-							is_same_value = from.owner
+							is_same_empire = from.owner
 							is_same_empire = from.owner
 							has_country_flag = copycat_rebels
 							has_country_flag = cc_rebels_merging
@@ -1014,7 +1014,7 @@ country_event = {
 						is_country_type = default
 						NOR = {
 							is_same_value = event_target:new_rebels
-							is_same_value = from.owner
+							is_same_empire = from.owner
 							is_same_empire = from.owner
 							has_country_flag = copycat_rebels
 							has_country_flag = cc_rebels_merging
@@ -1104,7 +1104,7 @@ planet_event = {
 			if = {
 				limit = {
 					any_country = {
-						NOT = { is_same_value = root.owner }
+						NOT = { is_same_empire = root.owner }
 						has_policy_flag = slavery_not_allowed
 						is_subject = no
 						OR = {
@@ -1129,7 +1129,7 @@ planet_event = {
 			if = {
 				limit = {
 					any_country = {
-						NOT = { is_same_value = root.owner }
+						NOT = { is_same_empire = root.owner }
 						has_valid_civic = civic_broken_shackles
 						root = { is_neighbor_of = prev }
 					}
@@ -1153,7 +1153,7 @@ planet_event = {
 				limit = {
 					original_owner = no
 					any_country = {
-						NOT = { is_same_value = root.owner }
+						NOT = { is_same_empire = root.owner }
 						is_subject = no
 						root = {
 							is_original_owner = prev
@@ -1171,7 +1171,7 @@ planet_event = {
 			if = {
 				limit = {
 					any_country = {
-						NOT = { is_same_value = root.owner }
+						NOT = { is_same_empire = root.owner }
 						is_subject = no
 						same_species_same_ethic = yes
 					}
@@ -1296,7 +1296,7 @@ planet_event = {
 		
 		
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 
 	}
 
@@ -1307,7 +1307,7 @@ planet_event = {
 			limit = {
 				any_country = {
 					has_country_flag = cc_rebellion
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					has_relation_flag = {
 						flag = cc_revolted_from
 						who = root.owner
@@ -1317,7 +1317,7 @@ planet_event = {
 			random_country = {
 				limit = {
 					has_country_flag = cc_rebellion
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					has_relation_flag = {
 						flag = cc_revolted_from
 						who = root.owner
@@ -1405,7 +1405,7 @@ planet_event = {
 			limit = { # has original owner
 				original_owner = no
 				any_country = {
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					is_subject = no
 					NOT = { has_ethic = ethic_gestalt_consciousness }
 					root = {
@@ -1416,7 +1416,7 @@ planet_event = {
 			}
 			random_country = {
 				limit = {
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					is_subject = no
 					NOT = { has_ethic = ethic_gestalt_consciousness }
 					root = {
@@ -1446,7 +1446,7 @@ planet_event = {
 						}
 					}
 					NOR = {
-						is_same_value = root.owner
+						is_same_empire = root.owner
 						is_same_empire = root.owner
 					}
 				}
@@ -1467,7 +1467,7 @@ planet_event = {
 						}
 					}
 					NOR = {
-						is_same_value = root.owner
+						is_same_empire = root.owner
 						is_same_empire = root.owner
 					}
 				}
@@ -1736,7 +1736,7 @@ planet_event = {
 		exists = owner
 		owner = { is_country_type = default }
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		planet_stability < @stabilitylevel2
 #		has_planet_flag = slave_riots
 		has_planet_flag = will_copycat_slave
@@ -1851,7 +1851,7 @@ planet_event = {
 		if = {
 			limit = {
 				any_country = {
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					is_subject = no
 					OR = {
 						is_same_species = event_target:leader_pop
@@ -1871,7 +1871,7 @@ planet_event = {
 			
 			random_country = {
 				limit = {
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					is_subject = no
 					OR = {
 						is_same_species = event_target:leader_pop

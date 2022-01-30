@@ -219,14 +219,9 @@ country_event = {
 		every_country = {
 			limit = {
 				NOT = { fromfrom = { has_planet_flag = ccrebel_planet_being_stirred_up_longer@prev } }
-				OR = {
-					is_country_type = default
-					is_country_type = awakened_fallen_empire
-				}
+				is_country_type_with_subjects = yes
 				NOR = {
-					has_valid_civic = civic_fanatic_purifiers
-					has_valid_civic = civic_hive_devouring_swarm
-					has_valid_civic = civic_machine_terminator
+					is_homicidal = yes
 					has_valid_civic = civic_barbaric_despoilers
 				}
 				is_neighbor_of = event_target:old_owner
@@ -330,16 +325,12 @@ country_event = {
 	trigger = {
 		exists = root
 		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
+			is_homicidal = yes
 			has_valid_civic = civic_barbaric_despoilers
 		}
 		any_country = {
 			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_machine_terminator
+				is_homicidal = yes
 				has_valid_civic = civic_barbaric_despoilers
 			}
 			OR = {
@@ -359,9 +350,7 @@ country_event = {
 		random_country = {
 			limit = {
 				NOR = {
-					has_valid_civic = civic_fanatic_purifiers
-					has_valid_civic = civic_hive_devouring_swarm
-					has_valid_civic = civic_machine_terminator
+					is_homicidal = yes
 					has_valid_civic = civic_barbaric_despoilers
 				}
 				OR = {
@@ -875,8 +864,8 @@ country_event = {
 			event_target:ccrebel_subsidised_rebels = {
 				ccrebel_add_level_2_rebel_subsidies = yes
 
-#				add_energy = 1000
-#				add_minerals = 3000
+#				add_resource = { energy = 1000 }
+#				add_resource = { minerals = 3000 }
 				
 				add_opinion_modifier = {
 					who = root
@@ -1116,8 +1105,8 @@ country_event = {
 			
 			event_target:ccrebel_subsidised_rebels = {
 				ccrebel_add_level_1_rebel_subsidies = yes
-#				add_energy = 1000
-#				add_minerals = 3000
+#				add_resource = { energy = 1000 }
+#				add_resource = { minerals = 3000 }
 				
 				add_opinion_modifier = {
 					who = root
@@ -1444,16 +1433,12 @@ country_event = {
 	trigger = {
 		exists = root
 		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
+			is_homicidal = yes
 			has_valid_civic = civic_barbaric_despoilers
 		}
 		any_country = {
 			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_machine_terminator
+				is_homicidal = yes
 				has_valid_civic = civic_barbaric_despoilers
 			}
 			root = {
@@ -1469,9 +1454,7 @@ country_event = {
 		random_country = {
 			limit = {
 				NOR = {
-					has_valid_civic = civic_fanatic_purifiers
-					has_valid_civic = civic_hive_devouring_swarm
-					has_valid_civic = civic_machine_terminator
+					is_homicidal = yes
 					has_valid_civic = civic_barbaric_despoilers
 				}
 				root = {
@@ -1721,8 +1704,8 @@ country_event = {
 			event_target:ccrebel_subsidised_rebels = {
 				ccrebel_add_level_3_rebel_subsidies = yes
 
-#				add_energy = 2000
-#				add_minerals = 6000
+#				add_resource = { energy = 2000 }
+#				add_resource = { minerals = 6000 }
 				
 				add_opinion_modifier = {
 					who = root
@@ -1961,8 +1944,8 @@ country_event = {
 			event_target:ccrebel_subsidised_rebels = {
 				ccrebel_add_level_2_rebel_subsidies = yes
 
-#				add_energy = 1000
-#				add_minerals = 3000
+#				add_resource = { energy = 1000 }
+#				add_resource = { minerals = 3000 }
 				
 				add_opinion_modifier = {
 					who = root
@@ -2202,8 +2185,8 @@ country_event = {
 			event_target:ccrebel_subsidised_rebels = {
 				ccrebel_add_level_1_rebel_subsidies = yes
 
-#				add_energy = 1000
-#				add_minerals = 3000
+#				add_resource = { energy = 1000 }
+#				add_resource = { minerals = 3000 }
 				
 				add_opinion_modifier = {
 					who = root
@@ -2234,16 +2217,12 @@ country_event = {
 	trigger = {
 		exists = root
 		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
+			is_homicidal = yes
 			has_valid_civic = civic_barbaric_despoilers
 		}
 		any_relation = {
 			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_machine_terminator
+				is_homicidal = yes
 				has_valid_civic = civic_barbaric_despoilers
 			}
 			root = {
@@ -2264,9 +2243,7 @@ country_event = {
 		random_country = {
 			limit = {
 				NOR = {
-					has_valid_civic = civic_fanatic_purifiers
-					has_valid_civic = civic_hive_devouring_swarm
-					has_valid_civic = civic_machine_terminator
+					is_homicidal = yes
 					has_valid_civic = civic_barbaric_despoilers
 				}
 				root = {

@@ -95,10 +95,7 @@ event = {
 			has_civic = civic_broken_shackles
 			has_civic = civic_free_republic
 			NAND = {
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-				}
+				is_militarist = yes
 				has_ethic = ethic_fanatic_egalitarian
 			}
 		}
@@ -110,10 +107,7 @@ event = {
 				has_civic = civic_free_republic
 				NOT = { has_country_flag = ccrebel_just_lost_war }
 				NAND = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
@@ -127,10 +121,7 @@ event = {
 
 					if = {
 						limit = {
-							NOR = {
-								has_ethic = ethic_militarist
-								has_ethic = ethic_fanatic_militarist
-							}
+							is_militarist = no
 						}
 						shift_ethic = ethic_militarist
 					}
@@ -143,10 +134,7 @@ event = {
 					if = {
 						limit = {
 							NAND = {
-								OR = {
-									has_ethic = ethic_militarist
-									has_ethic = ethic_fanatic_militarist
-								}
+								is_militarist = yes
 								has_ethic = ethic_fanatic_egalitarian
 							}
 						}
@@ -258,10 +246,7 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = no
 				}
 				shift_ethic = ethic_militarist
 			}
@@ -274,10 +259,7 @@ country_event = {
 			if = {
 				limit = {
 					NAND = {
-						OR = {
-							has_ethic = ethic_militarist
-							has_ethic = ethic_fanatic_militarist
-						}
+						is_militarist = yes
 						has_ethic = ethic_fanatic_egalitarian
 					}
 				}
@@ -446,10 +428,7 @@ country_event = {
 		every_neighbor_country = {
 			limit = {
 				has_policy_flag = slavery_allowed
-				OR = {
-					is_country_type = default
-					is_country_type = awakened_fallen_empire
-				}
+				is_country_type_with_subjects = yes
 			}
 			every_owned_planet = {
 				limit = {
@@ -852,7 +831,7 @@ planet_event = {
 		}
 		
 		exists = event_target:cc_repeating_revolt
-		owner = { is_same_value = event_target:cc_repeating_revolt }
+		is_owned_by = event_target:cc_repeating_revolt
 	}
 	
 	immediate = {
@@ -906,7 +885,7 @@ planet_event = {
 		exists = owner
 		owner = { is_country_type = default }
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		planet_stability < @stabilitylevel2
 #		has_planet_flag = slave_riots
 		has_modifier = cc_planet_call_of_liberty

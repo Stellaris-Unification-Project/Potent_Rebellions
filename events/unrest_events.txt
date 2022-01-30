@@ -23,7 +23,7 @@ planet_event = {
 		}
 		has_orbital_bombardment = no
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		any_owned_species = {
 			species_has_happiness_with_owner = root.owner
 		}
@@ -121,20 +121,14 @@ planet_event = {
 							OR = {
 								NOT = { any_owned_pop = { has_ethic = ethic_spiritualist } }
 								owner = {
-									OR = {
-										has_ethic = ethic_spiritualist
-										has_ethic = ethic_fanatic_spiritualist
-									}
+									is_spiritualist = yes
 								}
 							}
 						}
 						modifier = {
 							factor = 1.5
 							owner = {
-								OR = {
-									has_ethic = ethic_materialist
-									has_ethic = ethic_fanatic_materialist
-								}
+								is_materialist = yes
 							}
 						}
 						modifier = {
@@ -156,20 +150,14 @@ planet_event = {
 							OR = {
 								NOT = { any_owned_pop = { has_ethic = ethic_authoritarian } }
 								owner = {
-									OR = {
-										has_ethic = ethic_authoritarian
-										has_ethic = ethic_fanatic_authoritarian
-									}
+									is_authoritarian = yes
 								}
 							}
 						}
 						modifier = {
 							factor = 1.5
 							owner = {
-								OR = {
-									has_ethic = ethic_egalitarian
-									has_ethic = ethic_fanatic_egalitarian
-								}
+								is_egalitarian = yes
 							}
 						}
 						modifier = {
@@ -191,20 +179,14 @@ planet_event = {
 							OR = {
 								NOT = { any_owned_pop = { has_ethic = ethic_xenophobe } }
 								owner = {
-									OR = {
-										has_ethic = ethic_xenophobe
-										has_ethic = ethic_fanatic_xenophobe
-									}
+									is_xenophobe = yes
 								}
 							}
 						}
 						modifier = {
 							factor = 1.5
 							owner = {
-								OR = {
-									has_ethic = ethic_xenophile
-									has_ethic = ethic_fanatic_xenophile
-								}
+								is_xenophile = yes
 							}
 						}
 						modifier = {
@@ -226,20 +208,14 @@ planet_event = {
 							OR = {
 								NOT = { any_owned_pop = { has_ethic = ethic_materialist } }
 								owner = {
-									OR = {
-										has_ethic = ethic_materialist
-										has_ethic = ethic_fanatic_materialist
-									}
+									is_materialist = yes
 								}
 							}
 						}
 						modifier = {
 							factor = 1.5
 							owner = {
-								OR = {
-									has_ethic = ethic_spiritualist
-									has_ethic = ethic_fanatic_spiritualist
-								}
+								is_spiritualist = yes
 							}
 						}
 						modifier = {
@@ -261,20 +237,14 @@ planet_event = {
 							OR = {
 								NOT = { any_owned_pop = { has_ethic = ethic_xenophile } }
 								owner = {
-									OR = {
-										has_ethic = ethic_xenophile
-										has_ethic = ethic_fanatic_xenophile
-									}
+									is_xenophile = yes
 								}
 							}
 						}
 						modifier = {
 							factor = 1.5
 							owner = {
-								OR = {
-									has_ethic = ethic_xenophobe
-									has_ethic = ethic_fanatic_xenophobe
-								}
+								is_xenophobe = yes
 							}
 						}
 						modifier = {
@@ -296,20 +266,14 @@ planet_event = {
 							OR = {
 								NOT = { any_owned_pop = { has_ethic = ethic_egalitarian } }
 								owner = {
-									OR = {
-										has_ethic = ethic_egalitarian
-										has_ethic = ethic_fanatic_egalitarian
-									}
+									is_egalitarian = yes
 								}
 							}
 						}
 						modifier = {
 							factor = 1.5
 							owner = {
-								OR = {
-									has_ethic = ethic_authoritarian
-									has_ethic = ethic_fanatic_authoritarian
-								}
+								is_authoritarian = yes
 							}
 						}
 						modifier = {
@@ -331,20 +295,14 @@ planet_event = {
 							OR = {
 								NOT = { any_owned_pop = { has_ethic = ethic_pacifist } }
 								owner = {
-									OR = {
-										has_ethic = ethic_pacifist
-										has_ethic = ethic_fanatic_pacifist
-									}
+									is_pacifist = yes
 								}
 							}
 						}
 						modifier = {
 							factor = 1.5
 							owner = {
-								OR = {
-									has_ethic = ethic_militarist
-									has_ethic = ethic_fanatic_militarist
-								}
+								is_militarist = yes
 							}
 						}
 						modifier = {
@@ -366,20 +324,14 @@ planet_event = {
 							OR = {
 								NOT = { any_owned_pop = { has_ethic = ethic_militarist } }
 								owner = {
-									OR = {
-										has_ethic = ethic_militarist
-										has_ethic = ethic_fanatic_militarist
-									}
+									is_militarist = yes
 								}
 							}
 						}
 						modifier = {
 							factor = 1.5
 							owner = {
-								OR = {
-									has_ethic = ethic_pacifist
-									has_ethic = ethic_fanatic_pacifist
-								}
+								is_pacifist = yes
 							}
 						}
 						modifier = {
@@ -830,7 +782,7 @@ planet_event = {
 	trigger = {
 		owner = { is_country_type = default }
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		planet_stability < @stabilitylevel3
 		NOR = {
 			has_planet_flag = slave_stirring
@@ -915,7 +867,7 @@ planet_event = {
 			has_country_flag = slave_revolt_chain_active
 		}
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		has_orbital_bombardment = no
 		
 		any_owned_species = {
@@ -1003,7 +955,7 @@ planet_event = {
 		exists = owner
 		owner = { is_country_type = default }
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		planet_stability < @stabilitylevel2
  		any_owned_pop = {
 			not = { has_trait = trait_mechanical }
@@ -1140,7 +1092,7 @@ planet_event = {
 		exists = owner
 		owner = { is_country_type = default }
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		planet_stability < @stabilitylevel1
 		any_owned_pop = {
 			is_enslaved = yes
@@ -1205,7 +1157,7 @@ planet_event = {
 		exists = owner
 		owner = { is_country_type = default }
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		planet_stability < @stabilitylevel1
 		has_planet_flag = slave_riots
 		any_owned_pop = {
@@ -1671,7 +1623,7 @@ country_event = {
 		
 		if = { #first choice is a rebellion
 			limit = {
-				any_country = {
+				any_playable_country = {
 					is_country_type = default
 					is_same_species = from
 					has_civic = civic_free_republic
@@ -1689,7 +1641,7 @@ country_event = {
 					}
 				}
 			}
-			random_country = {
+			random_playable_country = {
 				limit = {
 					is_country_type = default
 					is_same_species = from
@@ -1714,7 +1666,7 @@ country_event = {
 
 		else_if = {
 			limit = {
-				any_country = {
+				any_playable_country = {
 					has_civic = civic_free_republic
 					has_civic = civic_broken_shackles
 					
@@ -2112,7 +2064,7 @@ event = {
 	is_triggered_only = yes
 
 	trigger = {
-		any_country = {
+		any_playable_country = {
 			is_country_type = default
 			has_country_flag = slave_revolt_chain_active
 			any_owned_planet = {
@@ -2123,7 +2075,7 @@ event = {
 	}
 
 	immediate = {
-		every_country = {
+		every_playable_country = {
 			limit = {
 				is_country_type = default
 				has_country_flag = slave_revolt_chain_active
@@ -2197,7 +2149,7 @@ event = {
 	is_triggered_only = yes
 
 	trigger = {
-		any_country = {
+		any_playable_country = {
 			is_country_type = default
 			has_country_flag = slave_revolt_chain_active
 			any_owned_planet = {
@@ -2213,7 +2165,7 @@ event = {
 	}
 
 	immediate = { 
-		every_country = {
+		every_playable_country = {
 			limit = {
 				is_country_type = default
 				has_country_flag = slave_revolt_chain_active
@@ -2387,7 +2339,7 @@ planet_event = {
 						has_ground_combat = no
 						has_orbital_bombardment = no
 						exists = controller
-						controller = { is_same_value = root.owner }
+						controller = { is_same_empire = root.owner }
 					}
 				}
 				modifier = {
@@ -2557,7 +2509,7 @@ planet_event = {
 		
 		
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 
 		any_owned_species = {
 			species_has_happiness_with_owner = root.owner
@@ -2651,7 +2603,7 @@ planet_event = {
 			limit = { # has original owner
 				original_owner = no
 				any_country = {
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					is_subject = no
 					NOT = { has_ethic = ethic_gestalt_consciousness }
 					root = {
@@ -2662,7 +2614,7 @@ planet_event = {
 			}
 			random_country = {
 				limit = {
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					is_subject = no
 					NOT = { has_ethic = ethic_gestalt_consciousness }
 					root = {
@@ -2688,7 +2640,7 @@ planet_event = {
 						}
 					}
 					NOR = {
-						is_same_value = root.owner
+						is_same_empire = root.owner
 						is_same_empire = root.owner
 					}
 				}
@@ -2706,7 +2658,7 @@ planet_event = {
 						}
 					}
 					NOR = {
-						is_same_value = root.owner
+						is_same_empire = root.owner
 						is_same_empire = root.owner
 					}
 				}
@@ -3144,13 +3096,13 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_country = {
+					any_playable_country = {
 						is_country_type = default
 						has_communications = ROOT
 						is_same_species = root
 						NOT = { has_country_flag = ccrebel_has_existed_5_years }
 						NOR = {
-							is_same_value = from.owner
+							is_same_empire = from.owner
 		
 							is_same_value = root
 							is_same_empire = root
@@ -3160,14 +3112,14 @@ country_event = {
 						}
 					}
 				}
-				random_country = {
+				random_playable_country = {
 					limit = {
 						is_country_type = default
 						has_communications = ROOT
 						is_same_species = root
 						NOT = { has_country_flag = ccrebel_has_existed_5_years }
 						NOR = {
-							is_same_value = from.owner
+							is_same_empire = from.owner
 		
 							is_same_value = root
 							is_same_empire = root
@@ -3184,7 +3136,7 @@ country_event = {
 			else = {
 				if = {
 					limit = {
-						any_country = {
+						any_playable_country = {
 							is_country_type = default
 							is_same_species = root
 							has_communications = ROOT
@@ -3192,7 +3144,7 @@ country_event = {
 								is_original_owner = prev
 							}
 							NOR = {
-								is_same_value = from.owner
+								is_same_empire = from.owner
 	
 								would_join_war = { attacker = root defender = from.owner side = from.owner }
 							}
@@ -3208,12 +3160,12 @@ country_event = {
 				if = {
 					limit = {
 						NOT = { exists = event_target:fatherland }
-						any_country = {
+						any_playable_country = {
 							has_communications = ROOT
 							is_country_type = default
 							is_same_species = root
 							NOR = {
-								is_same_value = from.owner
+								is_same_empire = from.owner
 								
 								would_join_war = { attacker = root defender = from.owner side = from.owner }
 								
@@ -3237,7 +3189,7 @@ country_event = {
 								}
 							}
 							NOR = {
-								is_same_value = from.owner
+								is_same_empire = from.owner
 								
 								would_join_war = { attacker = root defender = from.owner side = from.owner }
 								
@@ -3265,7 +3217,7 @@ country_event = {
 								}
 							}
 							NOR = {
-								is_same_value = from.owner
+								is_same_empire = from.owner
 
 								would_join_war = { attacker = root defender = from.owner side = from.owner }
 								
@@ -3568,7 +3520,7 @@ country_event = {
 	trigger = {
 		event_target:nationalist_revolt_planet = {
 			exists = controller
-			controller = { is_same_value = prev.owner }
+			controller = { is_same_empire = prev.owner }
 		}
 	}
 

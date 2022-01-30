@@ -61,7 +61,7 @@ event = {
 		}
 		if = {
 			limit = { has_global_flag = ccrebel_unrest_hard }
-			every_country = {
+			every_playable_country = {
 				limit = {
 					is_ai = no
 				}

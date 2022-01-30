@@ -107,7 +107,7 @@ country_event = {
 				every_fleet_in_system = {
 					limit = {
 						is_ship_class = shipclass_military_station
-						#owner = { is_same_value = prevprevprev.owner }
+						#is_owned_by = prevprevprev.owner
 					}
 					set_owner = root
 				}
@@ -143,18 +143,15 @@ country_event = {
 			limit = {
 				from.owner = {
 					OR = {
-						is_country_type = fallen_empire
-						is_country_type = awakened_fallen_empire
+						is_fallen_empire = yes
 
 						AND = {
 							is_subject = yes 
 							OR = {
 								is_subject_type = protectorate
 								overlord = {
-									OR = {
-										is_country_type = fallen_empire
-										is_country_type = awakened_fallen_empire
-									}
+									
+										is_fallen_empire = yes
 								}
 							}
 						}

@@ -201,10 +201,7 @@ ccrebel_sow_unrest = {
 					root = {
 						has_planet_flag = ccrebel_su_can_target@prev
 					}
-					OR = {
-						is_country_type = default
-						is_country_type = awakened_fallen_empire
-					}
+					is_country_type_with_subjects = yes
 					root.owner = {
 						OR = {
 							is_unfriendly_to = prev
@@ -311,10 +308,7 @@ ccrebel_sow_unrest = {
 							if = {
 								limit = {
 									root.owner = { has_ethic = ethic_fanatic_militarist }
-									owner = { NOR = { 
-											has_ethic = ethic_fanatic_militarist
-											has_ethic = ethic_militarist
-										}
+									owner = { is_militarist = no
 									}
 								}
 								add_modifier = {
@@ -325,10 +319,7 @@ ccrebel_sow_unrest = {
 							else_if = {
 								limit = {
 									root.owner = { has_ethic = ethic_fanatic_pacifist }
-									owner = { NOR = { 
-											has_ethic = ethic_fanatic_pacifist
-											has_ethic = ethic_pacifist
-										}
+									owner = { is_pacifist = no
 									}
 								}
 								add_modifier = {
@@ -339,10 +330,7 @@ ccrebel_sow_unrest = {
 							else_if = {
 								limit = {
 									root.owner = { has_ethic = ethic_fanatic_materialist }
-									owner = { NOR = { 
-											has_ethic = ethic_fanatic_materialist
-											has_ethic = ethic_materialist
-										}
+									owner = { is_materialist = no
 									}
 								}
 								add_modifier = {
@@ -353,10 +341,7 @@ ccrebel_sow_unrest = {
 							else_if = {
 								limit = {
 									root.owner = { has_ethic = ethic_fanatic_spiritualist }
-									owner = { NOR = { 
-											has_ethic = ethic_fanatic_spiritualist
-											has_ethic = ethic_spiritualist
-										}
+									owner = { is_spiritualist = no
 									}
 								}
 								add_modifier = {
@@ -367,10 +352,7 @@ ccrebel_sow_unrest = {
 							else_if = {
 								limit = {
 									root.owner = { has_ethic = ethic_fanatic_egalitarian }
-									owner = { NOR = { 
-											has_ethic = ethic_fanatic_egalitarian
-											has_ethic = ethic_egalitarian
-										}
+									owner = { is_egalitarian = no
 									}
 								}
 								add_modifier = {
@@ -381,10 +363,7 @@ ccrebel_sow_unrest = {
 							else_if = {
 								limit = {
 									root.owner = { has_ethic = ethic_fanatic_authoritarian }
-									owner = { NOR = { 
-											has_ethic = ethic_fanatic_authoritarian
-											has_ethic = ethic_authoritarian
-										}
+									owner = { is_authoritarian = no
 									}
 								}
 								add_modifier = {
@@ -395,10 +374,7 @@ ccrebel_sow_unrest = {
 							else_if = {
 								limit = {
 									root.owner = { has_ethic = ethic_fanatic_xenophile }
-									owner = { NOR = { 
-											has_ethic = ethic_fanatic_xenophile
-											has_ethic = ethic_xenophile
-										}
+									owner = { is_xenophile = no
 									}
 								}
 								add_modifier = {
@@ -409,10 +385,7 @@ ccrebel_sow_unrest = {
 							else_if = {
 								limit = {
 									root.owner = { has_ethic = ethic_fanatic_xenophobe }
-									owner = { NOR = { 
-											has_ethic = ethic_fanatic_xenophobe
-											has_ethic = ethic_xenophobe
-										}
+									owner = { is_xenophobe = no
 									}
 								}
 								add_modifier = {
@@ -469,10 +442,7 @@ ccrebel_sow_unrest = {
 								if = {
 									limit = {
 										root.owner = { has_ethic = ethic_fanatic_militarist }
-										owner = { NOR = { 
-												has_ethic = ethic_fanatic_militarist
-												has_ethic = ethic_militarist
-											}
+										owner = { is_militarist = no
 										}
 									}
 									add_modifier = {
@@ -483,10 +453,7 @@ ccrebel_sow_unrest = {
 								else_if = {
 									limit = {
 										root.owner = { has_ethic = ethic_fanatic_pacifist }
-										owner = { NOR = { 
-												has_ethic = ethic_fanatic_pacifist
-												has_ethic = ethic_pacifist
-											}
+										owner = { is_pacifist = no
 										}
 									}
 									add_modifier = {
@@ -497,10 +464,7 @@ ccrebel_sow_unrest = {
 								else_if = {
 									limit = {
 										root.owner = { has_ethic = ethic_fanatic_materialist }
-										owner = { NOR = { 
-												has_ethic = ethic_fanatic_materialist
-												has_ethic = ethic_materialist
-											}
+										owner = { is_materialist = no
 										}
 									}
 									add_modifier = {
@@ -511,10 +475,7 @@ ccrebel_sow_unrest = {
 								else_if = {
 									limit = {
 										root.owner = { has_ethic = ethic_fanatic_spiritualist }
-										owner = { NOR = { 
-												has_ethic = ethic_fanatic_spiritualist
-												has_ethic = ethic_spiritualist
-											}
+										owner = { is_spiritualist = no
 										}
 									}
 									add_modifier = {
@@ -525,10 +486,7 @@ ccrebel_sow_unrest = {
 								else_if = {
 									limit = {
 										root.owner = { has_ethic = ethic_fanatic_egalitarian }
-										owner = { NOR = { 
-												has_ethic = ethic_fanatic_egalitarian
-												has_ethic = ethic_egalitarian
-											}
+										owner = { is_egalitarian = no
 										}
 									}
 									add_modifier = {
@@ -539,10 +497,7 @@ ccrebel_sow_unrest = {
 								else_if = {
 									limit = {
 										root.owner = { has_ethic = ethic_fanatic_authoritarian }
-										owner = { NOR = { 
-												has_ethic = ethic_fanatic_authoritarian
-												has_ethic = ethic_authoritarian
-											}
+										owner = { is_authoritarian = no
 										}
 									}
 									add_modifier = {
@@ -553,10 +508,7 @@ ccrebel_sow_unrest = {
 								else_if = {
 									limit = {
 										root.owner = { has_ethic = ethic_fanatic_xenophile }
-										owner = { NOR = { 
-												has_ethic = ethic_fanatic_xenophile
-												has_ethic = ethic_xenophile
-											}
+										owner = { is_xenophile = no
 										}
 									}
 									add_modifier = {
@@ -567,10 +519,7 @@ ccrebel_sow_unrest = {
 								else_if = {
 									limit = {
 										root.owner = { has_ethic = ethic_fanatic_xenophobe }
-										owner = { NOR = { 
-												has_ethic = ethic_fanatic_xenophobe
-												has_ethic = ethic_xenophobe
-											}
+										owner = { is_xenophobe = no
 										}
 									}
 									add_modifier = {
@@ -629,10 +578,7 @@ ccrebel_sow_unrest = {
 									if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_militarist }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_militarist
-													has_ethic = ethic_militarist
-												}
+											owner = { is_militarist = no
 											}
 										}
 										add_modifier = {
@@ -643,10 +589,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_pacifist }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_pacifist
-													has_ethic = ethic_pacifist
-												}
+											owner = { is_pacifist = no
 											}
 										}
 										add_modifier = {
@@ -657,10 +600,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_materialist }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_materialist
-													has_ethic = ethic_materialist
-												}
+											owner = { is_materialist = no
 											}
 										}
 										add_modifier = {
@@ -671,10 +611,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_spiritualist }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_spiritualist
-													has_ethic = ethic_spiritualist
-												}
+											owner = { is_spiritualist = no
 											}
 										}
 										add_modifier = {
@@ -685,10 +622,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_egalitarian }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_egalitarian
-													has_ethic = ethic_egalitarian
-												}
+											owner = { is_egalitarian = no
 											}
 										}
 										add_modifier = {
@@ -699,10 +633,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_authoritarian }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_authoritarian
-													has_ethic = ethic_authoritarian
-												}
+											owner = { is_authoritarian = no
 											}
 										}
 										add_modifier = {
@@ -713,10 +644,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_xenophile }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_xenophile
-													has_ethic = ethic_xenophile
-												}
+											owner = { is_xenophile = no
 											}
 										}
 										add_modifier = {
@@ -727,10 +655,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_xenophobe }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_xenophobe
-													has_ethic = ethic_xenophobe
-												}
+											owner = { is_xenophobe = no
 											}
 										}
 										add_modifier = {
@@ -762,10 +687,7 @@ ccrebel_sow_unrest = {
 									if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_militarist }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_militarist
-													has_ethic = ethic_militarist
-												}
+											owner = { is_militarist = no
 											}
 										}
 										add_modifier = {
@@ -776,10 +698,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_pacifist }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_pacifist
-													has_ethic = ethic_pacifist
-												}
+											owner = { is_pacifist = no
 											}
 										}
 										add_modifier = {
@@ -790,10 +709,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_materialist }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_materialist
-													has_ethic = ethic_materialist
-												}
+											owner = { is_materialist = no
 											}
 										}
 										add_modifier = {
@@ -804,10 +720,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_spiritualist }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_spiritualist
-													has_ethic = ethic_spiritualist
-												}
+											owner = { is_spiritualist = no
 											}
 										}
 										add_modifier = {
@@ -818,10 +731,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_egalitarian }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_egalitarian
-													has_ethic = ethic_egalitarian
-												}
+											owner = { is_egalitarian = no
 											}
 										}
 										add_modifier = {
@@ -832,10 +742,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_authoritarian }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_authoritarian
-													has_ethic = ethic_authoritarian
-												}
+											owner = { is_authoritarian = no
 											}
 										}
 										add_modifier = {
@@ -846,10 +753,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_xenophile }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_xenophile
-													has_ethic = ethic_xenophile
-												}
+											owner = { is_xenophile = no
 											}
 										}
 										add_modifier = {
@@ -860,10 +764,7 @@ ccrebel_sow_unrest = {
 									else_if = {
 										limit = {
 											root.owner = { has_ethic = ethic_fanatic_xenophobe }
-											owner = { NOR = { 
-													has_ethic = ethic_fanatic_xenophobe
-													has_ethic = ethic_xenophobe
-												}
+											owner = { is_xenophobe = no
 											}
 										}
 										add_modifier = {

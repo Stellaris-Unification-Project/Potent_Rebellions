@@ -102,7 +102,7 @@ country_event = {
 			
 		every_owned_planet = {
 			limit = {
-				NOT = { is_capital = yes }
+				is_capital = no
 				pop_percentage = {
 					percentage > 0.30
 					limit = { 
@@ -258,7 +258,7 @@ planet_event = {
 		}
 
 		exists = controller
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		
 		owner = { has_country_flag = cc_country_patriot_revolt }
 	}
@@ -360,7 +360,7 @@ planet_event = {
 			has_planet_flag = revolt_in_progress
 		}
 		
-		controller = { is_same_value = root.owner }
+		controller = { is_same_empire = root.owner }
 		
 		any_owned_pop = { 
 			has_modifier = cc_war_with_kin
@@ -381,7 +381,7 @@ planet_event = {
 			limit = { # has fatherland
 				original_owner = no
 				any_country = {
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					is_at_war_with = root.owner
 					root = {
 						any_owned_pop = {
@@ -396,7 +396,7 @@ planet_event = {
 			}
 			random_country = {
 				limit = {
-					NOT = { is_same_value = root.owner }
+					NOT = { is_same_empire = root.owner }
 					is_at_war_with = root.owner
 					root = {
 						any_owned_pop = {
@@ -647,13 +647,13 @@ country_event = {
 
 		if = {
 			limit = { 
-				any_country = {
+				any_playable_country = {
 					is_country_type = default
 					has_country_flag = ccrebel_seceed_to_patriot@from
 					is_same_species = event_target:new_rebels
-					NOT = { is_same_value = event_target:new_rebels }
 					NOR = {
-						is_same_value = from.owner
+						is_same_value = event_target:new_rebels
+						is_same_empire = from.owner
 						is_same_empire = from.owner
 						has_country_flag = cc_rebels_merging
 					}
@@ -666,9 +666,7 @@ country_event = {
 					NOR = {
 						is_same_value = event_target:new_rebels
 						is_same_empire = event_target:new_rebels
-					}
-					NOR = {
-						is_same_value = from.owner
+						is_same_empire = from.owner
 						is_same_empire = from.owner
 						has_country_flag = cc_rebels_merging
 					}
